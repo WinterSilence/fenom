@@ -22,19 +22,18 @@ $fenom->setOptions($options);
 
 Options may by associative array like `'option_name' => true` or bitwise mask.
 
-| Option name            | Constant                  | Description  | Affect  |
-| ---------------------- | ------------------------- | ------------ | ------- |
-| *disable_methods*      | `Fenom::DENY_METHODS`     | disable calling methods of objects in templates.  | |
-| *disable_native_funcs* | `Fenom::DENY_NATIVE_FUNCS`| disable calling native function in templates, except allowed. | |
-| *auto_reload*          | `Fenom::AUTO_RELOAD`      | reload template if source will be changed | decreases performance |
-| *force_compile*        | `Fenom::FORCE_COMPILE`    | recompile template every time when the template renders | very decreases performance |
-| *disable_cache*        | `Fenom::DISABLE_CACHE`    | disable compile cache | greatly decreases performance |
-| *force_include*        | `Fenom::FORCE_INCLUDE`    | paste template body instead of include-tag | increases performance, increases cache size |
-| *auto_escape*          | `Fenom::AUTO_ESCAPE`      | html-escape each variables outputs | decreases performance |
-| *force_verify*         | `Fenom::FORCE_VERIFY`     | check existence every used variable | decreases performance |
-<!-- | *auto_trim*            | `Fenom::AUTO_TRIM`        | remove space-characters before and after tags | | -->
-| *disable_statics*      | `Fenom::DENY_STATICS`     | disable calling static methods in templates. | |
-| *strip*                | `Fenom::AUTO_STRIP`            | strip all whitespaces in templates. | decrease cache size |
+| Option name            | Constant                  | Description                                                  | Affect |
+| ---------------------- | ------------------------- | ------------------------------------------------------------ | ------ |
+| *disable_methods*      | `Fenom::DENY_METHODS`     | disable calling methods of objects in templates              |  |
+| *disable_native_funcs* | `Fenom::DENY_NATIVE_FUNCS`| disable calling native function in templates, except allowed |  |
+| *auto_reload*          | `Fenom::AUTO_RELOAD`      | reload template if source will be changed                    | decreases performance |
+| *force_compile*        | `Fenom::FORCE_COMPILE`    | recompile template every time when the template renders      | very decreases performance |
+| *disable_cache*        | `Fenom::DISABLE_CACHE`    | disable compile cache                                        | greatly decreases performance |
+| *force_include*        | `Fenom::FORCE_INCLUDE`    | paste template body instead of include-tag                   | increases performance, increases cache size |
+| *auto_escape*          | `Fenom::AUTO_ESCAPE`      | html-escape each variables outputs                           | decreases performance |
+| *force_verify*         | `Fenom::FORCE_VERIFY`     | check existence every used variable                          | decreases performance |
+| *disable_statics*      | `Fenom::DENY_STATICS`     | disable calling static methods in templates                  |  |
+| *strip*                | `Fenom::AUTO_STRIP`       | strip all whitespaces in templates                           | decrease cache size |
 
 ```php
 $fenom->setOptions(array(
